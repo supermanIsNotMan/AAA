@@ -1,0 +1,28 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native 
+   # active: git
+  cloud:
+    config:
+      server:
+#        git:
+#          username: supermanIsNotMan
+#          password: Yyj8881016055114
+#          uri: https://github.com/supermanIsNotMan/AAA.git
+        native:
+          search-locations: classpath:/test/
+      fail-fast: true #快速失败
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}.${server.port}
+    lease-renewal-interval-in-seconds: 3
+    lease-expiration-duration-in-seconds: 10

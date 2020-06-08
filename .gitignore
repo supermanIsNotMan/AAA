@@ -1,0 +1,4 @@
+# Project exclude paths
+/config_client/target/
+/config_server/target/
+/registry/target/
