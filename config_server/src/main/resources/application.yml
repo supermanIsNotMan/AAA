@@ -9,10 +9,10 @@ spring:
   cloud:
     config:
       server:
-#        git:
-#          username: supermanIsNotMan
-#          password: Yyj8881016055114
-#          uri: https://github.com/supermanIsNotMan/AAA.git
+        git:
+          username: supermanIsNotMan
+          password: Yyj8881016055114
+          uri: https://github.com/supermanIsNotMan/AAA.git
         native:
           search-locations: classpath:/test/
       fail-fast: true #快速失败
